@@ -4,7 +4,7 @@
 include("connect.php"); 
 
 if (empty($_GET['occasion'])){
-    header("Location: index.php?occasion=4");
+    header("Location: index.php?occasion=5");
 ;
 }
 
@@ -201,14 +201,6 @@ if (empty($_GET['occasion'])){
 // $result = mysqli_store_result(1);
 
 
-
-
-
-
-
-
-
-
 ?>
 
 
@@ -260,16 +252,11 @@ if (empty($_GET['occasion'])){
     <option value="1"> Valentine's day</option>
     <option value="2">Wedding</option>
     <option value="3">Birthday</option>
-    <option value="4">Memorial</option>
-    <option value="4">All</option>
+    <option value="4">Memorial</option> 
+    <option value="5">All</option>
   </select>
   <input type="submit" value="Search" class="searchBtn"></input>
 </div>
-
-
-
-
-
      </form>
 
 </div>
@@ -286,7 +273,7 @@ if (empty($_GET['occasion'])){
 if (isset($_GET['occasion']) && !empty($_GET['occasion'])) {
     $occasionId = $_GET['occasion'];
 
-    if( $occasionId == 4){
+    if( $occasionId == 5){
 
         $result = mysqli_query($connection, "CALL All_products()"); 
 
@@ -386,3 +373,4 @@ if (isset($_GET['occasion']) && !empty($_GET['occasion'])) {
 
 </body>
 </html>
+
